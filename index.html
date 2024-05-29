@@ -12,9 +12,9 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <title>Lamp Store - Braian A</title>
+    <title>Lamp Store</title>
   </head>
   <body>
     <header class="header" id="header">
@@ -23,16 +23,16 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link">Home</a>
+              <a href="#home" class="nav__link">Home</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Popular</a>
+              <a href="#popular" class="nav__link">Popular</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Caca</a>
+              <a href="#choose" class="nav__link">Choose</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Products</a>
+              <a href="#products" class="nav__link">Products</a>
             </li>
           </ul>
           <div class="nav__close" id="nav-close">
@@ -100,7 +100,102 @@
           </div>
         </div>
       </section>
-      <section class="popular section" id="popular"></section>
+      <section class="popular section" id="popular">
+        <div class="popular__container container">
+          <div class="popular__data">
+            <h2 class="popular__title">Popular</h2>
+            <p class="popular__desc">
+              Find our best products faster and get the quality lights we have
+              for you.
+            </p>
+          </div>
+          <div class="popular__content grid swiper">
+            <div class="popular__cards swiper-wrapper">
+              <article class="popular__card swiper-slide">
+                <figure class="popular__blob">
+                  <img
+                    src="assets/img/modern-lamp.png"
+                    alt="A picture of a modern lamp"
+                    class="popular__blob-img"
+                  />
+                </figure>
+                <h3 class="popular__name">Modern Lamp</h3>
+                <span class="popular__subtitle">Hanging Light</span>
+                <strong class="popular__price">14.99</strong>
+                <button class="popular__btn">
+                  <i class="ri-add-fill"></i>
+                </button>
+              </article>
+              <article class="popular__card swiper-slide">
+                <figure class="popular__blob">
+                  <img
+                    src="assets/img/industrial-lamp.png"
+                    alt="A picture of a modern lamp"
+                    class="popular__blob-img"
+                  />
+                </figure>
+                <h3 class="popular__name">Industrial Lamp</h3>
+                <span class="popular__subtitle">Hanging Light</span>
+                <strong class="popular__price">19.49</strong>
+                <button class="popular__btn">
+                  <i class="ri-add-fill"></i>
+                </button>
+              </article>
+              <article class="popular__card swiper-slide">
+                <figure class="popular__blob">
+                  <img
+                    src="assets/img/superbolw-lamp.png"
+                    alt="A picture of a modern lamp"
+                    class="popular__blob-img"
+                  />
+                </figure>
+                <h3 class="popular__name">Superbolw Lamp</h3>
+                <span class="popular__subtitle">Hanging Light</span>
+                <strong class="popular__price">12.99</strong>
+                <button class="popular__btn">
+                  <i class="ri-add-fill"></i>
+                </button>
+              </article>
+              <article class="popular__card swiper-slide">
+                <figure class="popular__blob">
+                  <img
+                    src="assets/img/ultrawide-lamp.png"
+                    alt="A picture of a modern lamp"
+                    class="popular__blob-img"
+                  />
+                </figure>
+                <h3 class="popular__name">Ultrawide Lamp</h3>
+                <span class="popular__subtitle">Hanging Light</span>
+                <strong class="popular__price">15.99</strong>
+                <button class="popular__btn">
+                  <i class="ri-add-fill"></i>
+                </button>
+              </article>
+              <article class="popular__card swiper-slide">
+                <figure class="popular__blob">
+                  <img
+                    src="assets/img/roundness-light.png"
+                    alt="A picture of a modern lamp"
+                    class="popular__blob-img"
+                  />
+                </figure>
+                <h3 class="popular__name">Roundness Light</h3>
+                <span class="popular__subtitle">Hanging Light</span>
+                <strong class="popular__price">13.49</strong>
+                <button class="popular__btn">
+                  <i class="ri-add-fill"></i>
+                </button>
+              </article>
+            </div>
+            <div class="swiper-button-prev">
+              <i class="ri-arrow-left-double-fill"></i>
+            </div>
+            <div class="swiper-button-next">
+              <i class="ri-arrow-right-double-fill"></i>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="choose section" id="choose"></section>
       <section class="features section"></section>
       <section class="products section" id="products"></section>
@@ -108,9 +203,9 @@
     </main>
     <footer class="footer"></footer>
     <!--=============== SCROLLREVEAL ===============-->
-    <script src=""></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
     <!--=============== SWIPER JS ===============-->
-    <script src=""></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
   </body>
