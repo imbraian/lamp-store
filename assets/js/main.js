@@ -1,4 +1,4 @@
-/*=============== SHOW MENU ===============*/
+/*=============== MENU ===============*/
 const navMenu = document.getElementById("nav-menu");
 const navToggle = document.getElementById("nav-toggle");
 const navClose = document.getElementById("nav-close");
@@ -15,7 +15,15 @@ if (navClose) {
   });
 }
 
-/*=============== REMOVE MENU MOBILE ===============*/
+const navLink = document.querySelectorAll(".nav__link");
+const linkAction = () => {
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.remove("show-menu");
+}
+
+navLink.forEach(link => {
+  link.addEventListener("click", linkAction);
+});
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 
