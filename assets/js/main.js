@@ -73,7 +73,35 @@ const toggleItem = (item) => {
   }
 };
 
-/*=============== SHOW SCROLL UP ===============*/
+const scrollUp = () => {
+  const scrollUp = document.getElementById("scroll-up");
+  this.scrollY >= 350
+    ? scrollUp.classList.add("show-scroll-up")
+    : scrollUp.classList.remove("show-scroll-up");
+};
+window.addEventListener("scroll", scrollUp);
+
+const sections = document.querySelectorAll("section[id]");
+const scrollActive = () => {
+  const scrollY = window.scrollY;
+
+  sections.forEach((section) => {
+    const sectionHeight = section.offsetHeight,
+      sectionTop = section.offsetTop - 58,
+      sectionId = section.getAttribute("id"),
+      sectionsClass = document.querySelector(
+        `.nav__menu a[href*="${sectionId}"]`
+      );
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      sectionsClass.classList.add("active-link");
+    } else {
+      sectionsClass.classList.remove("active-link");
+    }
+  });
+};
+
+window.addEventListener("scroll", scrollActive);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 

@@ -236,6 +236,12 @@ img {
 }
 
 /* Active link */
+.active-link {
+  background: var(--third-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 .home {
   position: relative;
@@ -770,4 +776,229 @@ img {
   right: 0.75rem;
   bottom: 0.75rem;
   cursor: pointer;
+}
+
+.join__container {
+  padding-block-start: 2.5rem;
+}
+
+.join__bg {
+  row-gap: 0;
+  background-color: var(--container-color);
+  padding: 0 1.5rem 3.5rem 1.5rem;
+}
+
+.join__blob {
+  position: relative;
+  width: 220px;
+  height: 320px;
+  border: 6px solid transparent;
+  background: var(--second-gradient) padding-box,
+    linear-gradient(90deg, hsl(20, 72%, 65%) 0%, hsl(20, 78%, 80%) 100%)
+      border-box;
+  border-radius: 20rem 20rem 0 0;
+  z-index: 2;
+}
+
+.join__img {
+  position: relative;
+  justify-self: center;
+  transform: translateY(-3.5rem);
+}
+
+.join__shadow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.75rem;
+  width: 170px;
+  height: 30px;
+  background: hsla(15, 60%, 52%, 0.6);
+  margin-inline: auto;
+  filter: blur(12px);
+  z-index: -1;
+}
+
+.join__blob-img {
+  display: block;
+  width: 190px;
+  margin-inline: auto;
+  transform: translateY(-6px);
+  z-index: 2;
+}
+
+.join__blob-title {
+  text-align: center;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  color: hsla(0, 0%, 100%, 0.3);
+  font-weight: var(--font-medium);
+}
+
+.join__content {
+  row-gap: 2rem;
+}
+
+.join__data {
+  text-align: center;
+}
+
+.join__title {
+  margin: 0;
+}
+
+.join__desc {
+  margin-block: 1rem;
+}
+
+.join__form {
+  display: grid;
+  row-gap: 0.75rem;
+}
+
+.join__input {
+  width: 100%;
+  background: var(--body-color);
+  border-radius: 4rem;
+  padding: 1.25rem 1.5rem;
+  color: var(--text-color);
+}
+
+.join__input::placeholder {
+  font-family: var(--second-font);
+}
+
+.join__btn {
+  cursor: pointer;
+  padding-block: 1rem;
+}
+
+.footer {
+  padding-block: 3rem 2.5rem;
+}
+
+.footer__content {
+  row-gap: 3rem;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--title-color);
+  font-size: var(--h2-font-size);
+  font-family: var(--second-font);
+  font-weight: var(--font-medium);
+}
+
+.footer__logo span {
+  background: var(--third-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.footer__data {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.footer__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-block-end: 1rem;
+}
+
+.footer__links {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.footer__link {
+  color: var(--text-color);
+  transition: color 0.4s;
+}
+
+.footer__link:hover {
+  color: var(--title-color);
+}
+
+.footer__social,
+.footer__group,
+.footer__terms {
+  display: flex;
+}
+
+.footer__social {
+  column-gap: 1.25rem;
+}
+
+.footer__social-link {
+  font-size: 1.25rem;
+  background: var(--third-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: transform 0.4s;
+}
+
+.footer__social-link:hover {
+  transform: scale(1.2);
+}
+
+.footer__group {
+  row-gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  margin-block-start: 3rem;
+}
+
+.footer__terms {
+  column-gap: 1.5rem;
+}
+
+.footer__terms a {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.footer__copy {
+  font-size: var(--small-font-size);
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: hsl(0, 0%, 75%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 65%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.scroll-up {
+  display: inline-flex;
+  background: var(--container-color);
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  padding: 0.35rem;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.1);
+  cursor: pointer;
+  z-index: var(--z-tooltip);
+  transition: bottom 0.4s, transform 0.4s;
+}
+
+.scroll-up:hover {
+  transform: translateY(-0.5rem);
+}
+
+.show-scroll-up {
+  bottom: 3rem;
 }
