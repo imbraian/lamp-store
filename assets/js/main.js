@@ -47,7 +47,6 @@ const popularSwiper = new Swiper(".popular__content", {
   },
 });
 
-/*=============== CHOOSE FAQ ===============*/
 const faqItems = document.querySelectorAll(".choose__faq-item");
 
 faqItems.forEach((item) => {
@@ -79,6 +78,7 @@ const scrollUp = () => {
     ? scrollUp.classList.add("show-scroll-up")
     : scrollUp.classList.remove("show-scroll-up");
 };
+
 window.addEventListener("scroll", scrollUp);
 
 const sections = document.querySelectorAll("section[id]");
@@ -103,8 +103,29 @@ const scrollActive = () => {
 
 window.addEventListener("scroll", scrollActive);
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const themeBtn = document.getElementById("change-theme"),
+  darkTheme = "dark-theme",
+  iconTheme = "ri-sun-line",
+  selectedTheme = localStorage.getItem("selected-theme"),
+  selectedIcon = localStorage.getItem("selected-icon");
 
-/*=============== DARK LIGHT THEME ===============*/
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = () =>
+  themeBtn.classList.contains(iconTheme) ? "ri-moon-line" : "ri-sun-line";
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+if (selectedTheme) {
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+    darkTheme
+  );
+  themeBtn.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](
+    iconTheme
+  );
+}
+
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle(darkTheme);
+  themeBtn.classList.toggle(iconTheme);
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  localStorage.setItem("selected-icon", getCurrentIcon());
+});
